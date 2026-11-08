@@ -690,10 +690,71 @@
         <div class="v">Casa da Avó Genoveva</div>
       </div>
     </div>
+    <p class="reveal" style="margin-top:34px;"><a class="btn-solid" href="#rsvp" data-i18n="heroRsvpBtn">RSVP now</a></p>
   </div>
 </section>
 
 <div class="tile-band" role="presentation"></div>
+
+<section class="section" id="rsvp">
+  <div class="wrap">
+    <div class="kicker" data-i18n="rsvpKicker">Please respond</div>
+    <h2 data-i18n="rsvpH2">Let us know you're coming</h2>
+
+    <div class="rsvp-panel">
+      <h3 data-i18n="rsvpH2">Let us know you're coming</h3>
+      <div class="sub" data-i18n="rsvpSub">One response per household is fine — just list everyone attending. We'd love to hear from you by 1 May 2027.</div>
+
+      <form id="rsvpForm">
+        <div class="row2">
+          <div class="field">
+            <label for="name" data-i18n="labelName">Name(s)</label>
+            <input type="text" id="name" data-i18n-placeholder="placeholderName" placeholder="e.g. Marie &amp; Paul Dubois" required>
+          </div>
+          <div class="field">
+            <label for="email" data-i18n="labelEmail">Email</label>
+            <input type="email" id="email" data-i18n-placeholder="placeholderEmail" placeholder="you@email.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label data-i18n="labelAttending">Will you be joining us?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="attending" value="yes" checked> <span data-i18n="optionYes">Joyfully accepts</span></label>
+            <label><input type="radio" name="attending" value="no"> <span data-i18n="optionNo">Regretfully declines</span></label>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="guests" data-i18n="labelGuests">Total guests attending (incl. you)</label>
+            <input type="number" id="guests" min="0" data-i18n-placeholder="placeholderGuests" placeholder="2">
+          </div>
+          <div class="field">
+            <label for="kids" data-i18n="labelKids">Children attending &amp; ages</label>
+            <input type="text" id="kids" data-i18n-placeholder="placeholderKids" placeholder="e.g. John, 8 — or leave blank">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="dietary" data-i18n="labelDietary">Dietary requirements or allergies</label>
+          <textarea id="dietary" data-i18n-placeholder="placeholderDietary" placeholder="e.g. vegetarian, shellfish allergy — or leave blank"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="message" data-i18n="labelMessage">Anything else you'd like us to know</label>
+          <textarea id="message" data-i18n-placeholder="placeholderMessage" placeholder="Song requests welcome"></textarea>
+        </div>
+
+        <div class="rsvp-actions">
+          <button type="submit" class="submit" data-i18n="submitBtn">Send our RSVP</button>
+          <span class="rsvp-note" data-i18n="rsvpNote">Opens your email app, addressed to us — nothing is sent until you do.</span>
+        </div>
+        <div class="rsvp-status" id="rsvpStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="story">
   <div class="wrap">
@@ -999,65 +1060,6 @@
   </div>
 </section>
 
-<section class="section" id="rsvp">
-  <div class="wrap">
-    <div class="kicker" data-i18n="rsvpKicker">Please respond</div>
-    <h2 data-i18n="rsvpH2">Let us know you're coming</h2>
-
-    <div class="rsvp-panel">
-      <h3 data-i18n="rsvpH2">Let us know you're coming</h3>
-      <div class="sub" data-i18n="rsvpSub">One response per household is fine — just list everyone attending. We'd love to hear from you by 1 May 2027.</div>
-
-      <form id="rsvpForm">
-        <div class="row2">
-          <div class="field">
-            <label for="name" data-i18n="labelName">Name(s)</label>
-            <input type="text" id="name" data-i18n-placeholder="placeholderName" placeholder="e.g. Marie &amp; Paul Dubois" required>
-          </div>
-          <div class="field">
-            <label for="email" data-i18n="labelEmail">Email</label>
-            <input type="email" id="email" data-i18n-placeholder="placeholderEmail" placeholder="you@email.com" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label data-i18n="labelAttending">Will you be joining us?</label>
-          <div class="radio-group">
-            <label><input type="radio" name="attending" value="yes" checked> <span data-i18n="optionYes">Joyfully accepts</span></label>
-            <label><input type="radio" name="attending" value="no"> <span data-i18n="optionNo">Regretfully declines</span></label>
-          </div>
-        </div>
-
-        <div class="row2">
-          <div class="field">
-            <label for="guests" data-i18n="labelGuests">Total guests attending (incl. you)</label>
-            <input type="number" id="guests" min="0" data-i18n-placeholder="placeholderGuests" placeholder="2">
-          </div>
-          <div class="field">
-            <label for="kids" data-i18n="labelKids">Children attending &amp; ages</label>
-            <input type="text" id="kids" data-i18n-placeholder="placeholderKids" placeholder="e.g. John, 8 — or leave blank">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="dietary" data-i18n="labelDietary">Dietary requirements or allergies</label>
-          <textarea id="dietary" data-i18n-placeholder="placeholderDietary" placeholder="e.g. vegetarian, shellfish allergy — or leave blank"></textarea>
-        </div>
-
-        <div class="field">
-          <label for="message" data-i18n="labelMessage">Anything else you'd like us to know</label>
-          <textarea id="message" data-i18n-placeholder="placeholderMessage" placeholder="Song requests welcome"></textarea>
-        </div>
-
-        <div class="rsvp-actions">
-          <button type="submit" class="submit" data-i18n="submitBtn">Send our RSVP</button>
-          <span class="rsvp-note" data-i18n="rsvpNote">Opens your email app, addressed to us — nothing is sent until you do.</span>
-        </div>
-        <div class="rsvp-status" id="rsvpStatus"></div>
-      </form>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
@@ -1073,7 +1075,7 @@
     en: {
       pageTitle: "Wedding of Thierry & Hélène — 25 August 2027, Tomar, Portugal",
       heroEyebrow: "The Wedding of", heroTagline: "are getting married — join us in Tomar, Portugal",
-      heroDateLabel: "Wedding day", heroDateValue: "25 August 2027",
+      heroDateLabel: "Wedding day", heroRsvpBtn: "RSVP now", heroDateValue: "25 August 2027",
       heroCeremonyLabel: "Ceremony", heroReceptionLabel: "Reception",
       storyKicker: "Our story",
       storyH2: "A river town, a Templar castle, and a very long way from where we started",
@@ -1163,7 +1165,7 @@
     pt: {
       pageTitle: "Casamento de Thierry & Hélène — 25 de agosto de 2027, Tomar, Portugal",
       heroEyebrow: "O Casamento de", heroTagline: "vão casar-se — venham celebrar connosco em Tomar, Portugal",
-      heroDateLabel: "Dia do casamento", heroDateValue: "25 de agosto de 2027",
+      heroDateLabel: "Dia do casamento", heroRsvpBtn: "Confirmar presença", heroDateValue: "25 de agosto de 2027",
       heroCeremonyLabel: "Cerimónia", heroReceptionLabel: "Receção",
       storyKicker: "A nossa história",
       storyH2: "Uma cidade à beira-rio, um castelo templário, e um caminho bem longo até aqui",
@@ -1253,7 +1255,7 @@
     fr: {
       pageTitle: "Mariage de Thierry & Hélène — 25 août 2027, Tomar, Portugal",
       heroEyebrow: "Le mariage de", heroTagline: "se marient — rejoignez-nous à Tomar, Portugal",
-      heroDateLabel: "Jour du mariage", heroDateValue: "25 août 2027",
+      heroDateLabel: "Jour du mariage", heroRsvpBtn: "Confirmer ma présence", heroDateValue: "25 août 2027",
       heroCeremonyLabel: "Cérémonie", heroReceptionLabel: "Réception",
       storyKicker: "Notre histoire",
       storyH2: "Une ville au bord de l'eau, un château templier, et un très long chemin parcouru",
