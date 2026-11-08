@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title id="pageTitleTag">Thierry &amp; Hélène — 25 August 2027, Tomar</title>
+<title id="pageTitleTag">Wedding of Thierry &amp; Hélène — 25 August 2027, Tomar, Portugal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Karla:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -159,6 +159,20 @@
     gap: 10px;
   }
   .hero-eyebrow svg { width: 18px; height: 18px; flex: none; }
+  .hero-eyebrow.wedding-label {
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--terracotta-deep);
+  }
+  .hero-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(20px, 3.2vw, 30px);
+    color: var(--ink-soft);
+    margin-top: 18px;
+  }
   .hero h1 {
     font-size: clamp(52px, 11vw, 118px);
     line-height: 0.96;
@@ -656,14 +670,15 @@
     </g>
   </svg>
   <div class="wrap">
-    <div class="hero-eyebrow reveal">
+    <div class="hero-eyebrow wedding-label reveal">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M4 8h16M4 16h16"/></svg>
-      <span data-i18n="heroEyebrow">Tomar, Portugal</span>
+      <span data-i18n="heroEyebrow">The Wedding of</span>
     </div>
     <h1 class="reveal">Thierry <em>&amp;</em> Hélène</h1>
+    <p class="hero-tagline reveal" data-i18n="heroTagline">are getting married — join us in Tomar, Portugal</p>
     <div class="hero-meta reveal">
       <div>
-        <div class="k" data-i18n="heroDateLabel">The date</div>
+        <div class="k" data-i18n="heroDateLabel">Wedding day</div>
         <div class="v" data-i18n="heroDateValue">25 August 2027</div>
       </div>
       <div>
@@ -1056,9 +1071,9 @@
 
   var translations = {
     en: {
-      pageTitle: "Thierry & Hélène — 25 August 2027, Tomar",
-      heroEyebrow: "Tomar, Portugal",
-      heroDateLabel: "The date", heroDateValue: "25 August 2027",
+      pageTitle: "Wedding of Thierry & Hélène — 25 August 2027, Tomar, Portugal",
+      heroEyebrow: "The Wedding of", heroTagline: "are getting married — join us in Tomar, Portugal",
+      heroDateLabel: "Wedding day", heroDateValue: "25 August 2027",
       heroCeremonyLabel: "Ceremony", heroReceptionLabel: "Reception",
       storyKicker: "Our story",
       storyH2: "A river town, a Templar castle, and a very long way from where we started",
@@ -1146,9 +1161,9 @@
       placeholderMessage: "Song requests welcome"
     },
     pt: {
-      pageTitle: "Thierry & Hélène — 25 de agosto de 2027, Tomar",
-      heroEyebrow: "Tomar, Portugal",
-      heroDateLabel: "A data", heroDateValue: "25 de agosto de 2027",
+      pageTitle: "Casamento de Thierry & Hélène — 25 de agosto de 2027, Tomar, Portugal",
+      heroEyebrow: "O Casamento de", heroTagline: "vão casar-se — venham celebrar connosco em Tomar, Portugal",
+      heroDateLabel: "Dia do casamento", heroDateValue: "25 de agosto de 2027",
       heroCeremonyLabel: "Cerimónia", heroReceptionLabel: "Receção",
       storyKicker: "A nossa história",
       storyH2: "Uma cidade à beira-rio, um castelo templário, e um caminho bem longo até aqui",
@@ -1236,9 +1251,9 @@
       placeholderMessage: "Pedidos de música são bem-vindos"
     },
     fr: {
-      pageTitle: "Thierry & Hélène — 25 août 2027, Tomar",
-      heroEyebrow: "Tomar, Portugal",
-      heroDateLabel: "La date", heroDateValue: "25 août 2027",
+      pageTitle: "Mariage de Thierry & Hélène — 25 août 2027, Tomar, Portugal",
+      heroEyebrow: "Le mariage de", heroTagline: "se marient — rejoignez-nous à Tomar, Portugal",
+      heroDateLabel: "Jour du mariage", heroDateValue: "25 août 2027",
       heroCeremonyLabel: "Cérémonie", heroReceptionLabel: "Réception",
       storyKicker: "Notre histoire",
       storyH2: "Une ville au bord de l'eau, un château templier, et un très long chemin parcouru",
