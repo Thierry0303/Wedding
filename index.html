@@ -232,10 +232,12 @@
     border-top: 1px solid var(--rule);
   }
   @media (max-width: 640px) { .section { padding: 64px 0; } }
+  .tbc-note { margin-top: 18px; font-size: 14px; font-style: italic; color: var(--ink-soft); }
   .kicker {
     font-family: 'Fraunces', serif;
     font-style: italic;
-    font-size: 18px;
+    font-size: clamp(38px, 5.4vw, 56px);
+    line-height: 1.05;
     color: var(--olive);
     margin-bottom: 10px;
   }
@@ -752,6 +754,70 @@
   </div>
 </section>
 
+<section class="section" id="details">
+  <div class="wrap">
+    <div class="kicker" data-i18n="detailsKicker">The details</div>
+    <h2 data-i18n="detailsH2">Two places, one long day</h2>
+    <p style="margin-top:16px;" data-i18n="detailsIntro">The ceremony and the party happen in two different spots, a short drive apart — details for both are below.</p>
+    <p style="margin-top:10px; color:var(--ink-soft);" data-i18n="detailsOneDayNote">It's a wedding in Portugal: everything happens on the one day, and there's no next-day gathering to plan around.</p>
+
+    <div class="venue-grid">
+      <div class="venue-card">
+        <h3 data-i18n="ceremonyTitle">Igreja de São João Baptista</h3>
+        <div class="addr" data-i18n="ceremonyAddr">Praça da República, Tomar</div>
+        <p data-i18n="ceremonyDesc">A 15th-century Manueline church right on Tomar's main square, where we'll say our vows.</p>
+        <details class="art-toggle">
+          <summary data-i18n="ceremonyToggleLabel">Inside the church</summary>
+          <p data-i18n="ceremonyToggleText">A Renaissance stone pulpit by João de Ruão, and a panel painting attributed to the court painter Gregório Lopes.</p>
+        </details>
+        <div class="links">
+          <a class="btn" data-i18n="mapLink" href="https://www.google.com/maps/search/Igreja+de+S%C3%A3o+Jo%C3%A3o+Baptista+Tomar" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+      <div class="venue-card">
+        <h3 data-i18n="receptionTitle">Casa da Avó Genoveva</h3>
+        <div class="addr" data-i18n="receptionAddr">Tomar, Portugal</div>
+        <p data-i18n="receptionDesc">A private estate just outside town, with stone terraces and olive groves, where the celebration continues.</p>
+        <div class="links">
+          <a class="btn" data-i18n="mapLink" href="https://www.google.com/maps/search/Casa+da+Av%C3%B3+Genoveva+Tomar" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="timeline">
+      <li>
+        <div class="time">15:00</div>
+        <div class="what"><strong data-i18n="tl1Title">Guests arrive at the church</strong><span data-i18n="tl1Desc">Find a seat inside the Igreja de São João Baptista — the ceremony begins at 15:30.</span></div>
+      </li>
+      <li>
+        <div class="time">15:30</div>
+        <div class="what"><strong data-i18n="tl2Title">Ceremony</strong><span data-i18n="tl2Desc">A full Catholic Mass, over an hour long, watched over by five centuries of Manueline stonework — we say our vows partway through.</span></div>
+      </li>
+      <li>
+        <div class="time">16:30</div>
+        <div class="what"><strong data-i18n="tl3Title">On the esplanade</strong><span data-i18n="tl3Desc">Photos and a toast outside the church, while everyone catches their breath after the Mass.</span></div>
+      </li>
+      <li>
+        <div class="time">17:00</div>
+        <div class="what"><strong data-i18n="tl4Title">Shuttle to Casa da Avó Genoveva</strong><span data-i18n="tl4Desc">A short drive to the reception — shuttle details to follow closer to the date.</span></div>
+      </li>
+      <li>
+        <div class="time">17:30</div>
+        <div class="what"><strong data-i18n="tl5Title">Drinks &amp; canapés</strong><span data-i18n="tl5Desc">In the garden, among the olive trees, while we sneak off for photos.</span></div>
+      </li>
+      <li>
+        <div class="time">19:30</div>
+        <div class="what"><strong data-i18n="tl6Title">Dinner</strong><span data-i18n="tl6Desc">Indoors, with local wine and far too much food.</span></div>
+      </li>
+      <li>
+        <div class="time">22:00</div>
+        <div class="what"><strong data-i18n="tl7Title">Dancing</strong><span data-i18n="tl7Desc">Until someone finally turns the lights on.</span></div>
+      </li>
+    </ul>
+    <p class="tbc-note" data-i18n="timingsNote">All timings are approximate and still to be confirmed (TBC).</p>
+  </div>
+</section>
+
 <section class="section" id="rsvp">
   <div class="wrap">
     <div class="kicker" data-i18n="rsvpKicker">Please respond</div>
@@ -808,6 +874,72 @@
         </div>
         <div class="rsvp-status" id="rsvpStatus"></div>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="travel">
+  <div class="wrap">
+    <div class="kicker" data-i18n="travelKicker">Getting here</div>
+    <h2 data-i18n="travelH2">Travel &amp; where to stay</h2>
+    <p style="margin-top:16px; max-width:65ch;" data-i18n="travelIntro">The nearest airport is Lisbon (LIS), about 1 hour 40 minutes' drive from Tomar, or a similar journey by train to Tomar's own station. We'd suggest arriving on 24 August so you're rested for the day itself — most of us will be.</p>
+
+    <p style="margin-top:10px; max-width:65ch; font-size:15px; color:var(--ink-soft);" data-i18n="travelHotelsNote">The two below are just our suggestions — Tomar has plenty of other hotels and guesthouses if you'd rather look around.</p>
+
+    <div class="travel-grid">
+      <div class="stay-card">
+        <h4 data-i18n="hotel1Name">Hotel República</h4>
+        <p data-i18n="hotel1Desc">A boutique spot right on Praça da República, in the heart of town — a short walk to almost everything, including the church.</p>
+        <a class="btn" href="mailto:booking@hotelrepublica.pt">booking@hotelrepublica.pt</a>
+      </div>
+      <div class="stay-card">
+        <h4 data-i18n="hotel2Name">Hotel dos Templários</h4>
+        <p data-i18n="hotel2Desc">Larger and a little further out, with a pool — a good fit for families, and for anyone who wants more space.</p>
+        <a class="btn" href="mailto:geral@hoteldostemplarios.pt">geral@hoteldostemplarios.pt</a>
+      </div>
+    </div>
+    <p style="margin-top:28px; font-size:15px; color:var(--ink-soft);" data-i18n="travelFooterNote">Book directly with the hotel rather than through a booking site.</p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="kicker" data-i18n="faqKicker">Good to know</div>
+    <h2 data-i18n="faqH2">Questions we expect you'll ask</h2>
+
+    <div style="margin-top:36px;">
+      <details class="faq" open>
+        <summary><span data-i18n="faq1Q">What should I wear?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq1A">Late August in Tomar runs hot, and we'll be moving between a church and an outdoor terrace — light fabrics and comfortable shoes will serve you far better than heels sinking into a lawn. It's entirely up to you in the end — we just wanted you to know what to expect.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq2Q">How do we get from the church to the reception?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq2A">It's a short drive — we're arranging shuttles between the two, details to follow. If you'd rather drive yourself, both venues have parking.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq3Q">Are children welcome?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq3A">Yes — we're delighted to have kids there, and there'll be plenty of family around to keep them company. Let us know ages when you RSVP so we can plan food and seating.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq4Q">Can I bring a plus-one?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq4A">If your invitation names a plus-one, they're very welcome — just include their name on the RSVP. If you're not sure, ask us directly.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq5Q">Dietary requirements?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq5A">There's a spot for that on the RSVP form below — tell us about allergies or preferences and we'll make sure the caterer knows.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq6Q">Gifts?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq6A">Your being there is genuinely enough — we're just happy to have you with us.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq7Q">What's the weather like?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq7A">Hot and dry — late August in central Portugal typically sits in the high 20s to mid-30s°C. Sun protection during the day (bring extra if you have particularly sensitive skin), a light layer for after dark.</div>
+      </details>
+      <details class="faq">
+        <summary><span data-i18n="faq8Q">Anything happening the day after?</span><span class="plus">+</span></summary>
+        <div class="a" data-i18n="faq8A">Not in the British sense — weddings in Portugal don't usually have a next-day brunch or hospitality. The day itself tends to run long, often into the early hours, so the day after is really just for resting and enjoying Tomar at your own pace.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -918,69 +1050,6 @@
   </div>
 </section>
 
-<section class="section" id="details">
-  <div class="wrap">
-    <div class="kicker" data-i18n="detailsKicker">The details</div>
-    <h2 data-i18n="detailsH2">Two places, one long day</h2>
-    <p style="margin-top:16px;" data-i18n="detailsIntro">The ceremony and the party happen in two different spots, a short drive apart — details for both are below.</p>
-    <p style="margin-top:10px; color:var(--ink-soft);" data-i18n="detailsOneDayNote">It's a wedding in Portugal: everything happens on the one day, and there's no next-day gathering to plan around.</p>
-
-    <div class="venue-grid">
-      <div class="venue-card">
-        <h3 data-i18n="ceremonyTitle">Igreja de São João Baptista</h3>
-        <div class="addr" data-i18n="ceremonyAddr">Praça da República, Tomar</div>
-        <p data-i18n="ceremonyDesc">A 15th-century Manueline church right on Tomar's main square, where we'll say our vows.</p>
-        <details class="art-toggle">
-          <summary data-i18n="ceremonyToggleLabel">Inside the church</summary>
-          <p data-i18n="ceremonyToggleText">A Renaissance stone pulpit by João de Ruão, and a panel painting attributed to the court painter Gregório Lopes.</p>
-        </details>
-        <div class="links">
-          <a class="btn" data-i18n="mapLink" href="https://www.google.com/maps/search/Igreja+de+S%C3%A3o+Jo%C3%A3o+Baptista+Tomar" target="_blank" rel="noopener">Open in Maps</a>
-        </div>
-      </div>
-      <div class="venue-card">
-        <h3 data-i18n="receptionTitle">Casa da Avó Genoveva</h3>
-        <div class="addr" data-i18n="receptionAddr">Tomar, Portugal</div>
-        <p data-i18n="receptionDesc">A private estate just outside town, with stone terraces and olive groves, where the celebration continues.</p>
-        <div class="links">
-          <a class="btn" data-i18n="mapLink" href="https://www.google.com/maps/search/Casa+da+Av%C3%B3+Genoveva+Tomar" target="_blank" rel="noopener">Open in Maps</a>
-        </div>
-      </div>
-    </div>
-
-    <ul class="timeline">
-      <li>
-        <div class="time">15:00</div>
-        <div class="what"><strong data-i18n="tl1Title">Guests arrive at the church</strong><span data-i18n="tl1Desc">Find a seat inside the Igreja de São João Baptista — the ceremony begins at 15:30.</span></div>
-      </li>
-      <li>
-        <div class="time">15:30</div>
-        <div class="what"><strong data-i18n="tl2Title">Ceremony</strong><span data-i18n="tl2Desc">A full Catholic Mass, over an hour long, watched over by five centuries of Manueline stonework — we say our vows partway through.</span></div>
-      </li>
-      <li>
-        <div class="time">16:30</div>
-        <div class="what"><strong data-i18n="tl3Title">On the esplanade</strong><span data-i18n="tl3Desc">Photos and a toast outside the church, while everyone catches their breath after the Mass.</span></div>
-      </li>
-      <li>
-        <div class="time">17:00</div>
-        <div class="what"><strong data-i18n="tl4Title">Shuttle to Casa da Avó Genoveva</strong><span data-i18n="tl4Desc">A short drive to the reception — shuttle details to follow closer to the date.</span></div>
-      </li>
-      <li>
-        <div class="time">17:30</div>
-        <div class="what"><strong data-i18n="tl5Title">Drinks &amp; canapés</strong><span data-i18n="tl5Desc">In the garden, among the olive trees, while we sneak off for photos.</span></div>
-      </li>
-      <li>
-        <div class="time">19:30</div>
-        <div class="what"><strong data-i18n="tl6Title">Dinner</strong><span data-i18n="tl6Desc">Indoors, with local wine and far too much food.</span></div>
-      </li>
-      <li>
-        <div class="time">22:00</div>
-        <div class="what"><strong data-i18n="tl7Title">Dancing</strong><span data-i18n="tl7Desc">Until someone finally turns the lights on.</span></div>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <section class="section" id="gallery">
   <div class="wrap">
     <div class="kicker" data-i18n="galleryKicker">A few glimpses</div>
@@ -1020,72 +1089,6 @@
   </div>
 </section>
 
-<section class="section" id="travel">
-  <div class="wrap">
-    <div class="kicker" data-i18n="travelKicker">Getting here</div>
-    <h2 data-i18n="travelH2">Travel &amp; where to stay</h2>
-    <p style="margin-top:16px; max-width:65ch;" data-i18n="travelIntro">The nearest airport is Lisbon (LIS), about 1 hour 40 minutes' drive from Tomar, or a similar journey by train to Tomar's own station. We'd suggest arriving on 24 August so you're rested for the day itself — most of us will be.</p>
-
-    <p style="margin-top:10px; max-width:65ch; font-size:15px; color:var(--ink-soft);" data-i18n="travelHotelsNote">The two below are just our suggestions — Tomar has plenty of other hotels and guesthouses if you'd rather look around.</p>
-
-    <div class="travel-grid">
-      <div class="stay-card">
-        <h4 data-i18n="hotel1Name">Hotel República</h4>
-        <p data-i18n="hotel1Desc">A boutique spot right on Praça da República, in the heart of town — a short walk to almost everything, including the church.</p>
-        <a class="btn" href="mailto:booking@hotelrepublica.pt">booking@hotelrepublica.pt</a>
-      </div>
-      <div class="stay-card">
-        <h4 data-i18n="hotel2Name">Hotel dos Templários</h4>
-        <p data-i18n="hotel2Desc">Larger and a little further out, with a pool — a good fit for families, and for anyone who wants more space.</p>
-        <a class="btn" href="mailto:geral@hoteldostemplarios.pt">geral@hoteldostemplarios.pt</a>
-      </div>
-    </div>
-    <p style="margin-top:28px; font-size:15px; color:var(--ink-soft);" data-i18n="travelFooterNote">Book directly with the hotel rather than through a booking site.</p>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="kicker" data-i18n="faqKicker">Good to know</div>
-    <h2 data-i18n="faqH2">Questions we expect you'll ask</h2>
-
-    <div style="margin-top:36px;">
-      <details class="faq" open>
-        <summary><span data-i18n="faq1Q">What should I wear?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq1A">Late August in Tomar runs hot, and we'll be moving between a church and an outdoor terrace — light fabrics and comfortable shoes will serve you far better than heels sinking into a lawn. It's entirely up to you in the end — we just wanted you to know what to expect.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq2Q">How do we get from the church to the reception?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq2A">It's a short drive — we're arranging shuttles between the two, details to follow. If you'd rather drive yourself, both venues have parking.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq3Q">Are children welcome?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq3A">Yes — we're delighted to have kids there, and there'll be plenty of family around to keep them company. Let us know ages when you RSVP so we can plan food and seating.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq4Q">Can I bring a plus-one?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq4A">If your invitation names a plus-one, they're very welcome — just include their name on the RSVP. If you're not sure, ask us directly.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq5Q">Dietary requirements?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq5A">There's a spot for that on the RSVP form below — tell us about allergies or preferences and we'll make sure the caterer knows.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq6Q">Gifts?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq6A">Your being there is genuinely enough — we're just happy to have you with us.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq7Q">What's the weather like?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq7A">Hot and dry — late August in central Portugal typically sits in the high 20s to mid-30s°C. Sun protection during the day (bring extra if you have particularly sensitive skin), a light layer for after dark.</div>
-      </details>
-      <details class="faq">
-        <summary><span data-i18n="faq8Q">Anything happening the day after?</span><span class="plus">+</span></summary>
-        <div class="a" data-i18n="faq8A">Not in the British sense — weddings in Portugal don't usually have a next-day brunch or hospitality. The day itself tends to run long, often into the early hours, so the day after is really just for resting and enjoying Tomar at your own pace.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
 
 <footer>
   <div class="wrap">
@@ -1101,7 +1104,7 @@
     en: {
       pageTitle: "Wedding of Thierry & Hélène — 25 August 2027, Tomar, Portugal",
       heroEyebrow: "The Wedding of", heroTagline: "are getting married — join us in Tomar, Portugal",
-      heroDateLabel: "Wedding day", heroRsvpBtn: "RSVP now", qnDetails: "Details", qnRsvp: "Yes / No", qnFaq: "FAQs", qnPhotos: "Photo upload", qnSights: "What to see: Tomar, Fátima, Nazaré", heroDateValue: "25 August 2027",
+      heroDateLabel: "Wedding day", heroRsvpBtn: "RSVP now", timingsNote: "All timings are approximate and still to be confirmed (TBC).", qnDetails: "Details", qnRsvp: "Yes / No", qnFaq: "FAQs", qnPhotos: "Photo upload", qnSights: "What to see: Tomar, Fátima, Nazaré", heroDateValue: "25 August 2027",
       heroCeremonyLabel: "Ceremony", heroReceptionLabel: "Reception",
       storyKicker: "Our story",
       storyH2: "A river town, a Templar castle, and a very long way from where we started",
@@ -1191,7 +1194,7 @@
     pt: {
       pageTitle: "Casamento de Thierry & Hélène — 25 de agosto de 2027, Tomar, Portugal",
       heroEyebrow: "O Casamento de", heroTagline: "vão casar-se — venham celebrar connosco em Tomar, Portugal",
-      heroDateLabel: "Dia do casamento", heroRsvpBtn: "Confirmar presença", qnDetails: "Detalhes", qnRsvp: "Sim / Não", qnFaq: "FAQ", qnPhotos: "Enviar fotos", qnSights: "A visitar: Tomar, Fátima, Nazaré", heroDateValue: "25 de agosto de 2027",
+      heroDateLabel: "Dia do casamento", heroRsvpBtn: "Confirmar presença", timingsNote: "Todos os horários são aproximados e ainda por confirmar.", qnDetails: "Detalhes", qnRsvp: "Sim / Não", qnFaq: "FAQ", qnPhotos: "Enviar fotos", qnSights: "A visitar: Tomar, Fátima, Nazaré", heroDateValue: "25 de agosto de 2027",
       heroCeremonyLabel: "Cerimónia", heroReceptionLabel: "Receção",
       storyKicker: "A nossa história",
       storyH2: "Uma cidade à beira-rio, um castelo templário, e um caminho bem longo até aqui",
@@ -1281,7 +1284,7 @@
     fr: {
       pageTitle: "Mariage de Thierry & Hélène — 25 août 2027, Tomar, Portugal",
       heroEyebrow: "Le mariage de", heroTagline: "se marient — rejoignez-nous à Tomar, Portugal",
-      heroDateLabel: "Jour du mariage", heroRsvpBtn: "Confirmer ma présence", qnDetails: "Détails", qnRsvp: "Oui / Non", qnFaq: "FAQ", qnPhotos: "Partager des photos", qnSights: "À voir : Tomar, Fátima, Nazaré", heroDateValue: "25 août 2027",
+      heroDateLabel: "Jour du mariage", heroRsvpBtn: "Confirmer ma présence", timingsNote: "Tous les horaires sont approximatifs et restent à confirmer.", qnDetails: "Détails", qnRsvp: "Oui / Non", qnFaq: "FAQ", qnPhotos: "Partager des photos", qnSights: "À voir : Tomar, Fátima, Nazaré", heroDateValue: "25 août 2027",
       heroCeremonyLabel: "Cérémonie", heroReceptionLabel: "Réception",
       storyKicker: "Notre histoire",
       storyH2: "Une ville au bord de l'eau, un château templier, et un très long chemin parcouru",
