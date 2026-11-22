@@ -115,13 +115,26 @@
     border-radius: 16px;
     cursor: pointer;
   }
+  .lang-switch button svg { display: block; width: 30px; height: 20px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,0.18); }
+  .lang-switch button { opacity: 0.55; padding: 5px 6px; }
   .lang-switch button.active {
     background: var(--terracotta);
-    color: #FBF4E6;
+    opacity: 1;
+  }
+  .lang-switch button.active svg { box-shadow: 0 0 0 1px rgba(255,255,255,0.7); }
+  .one-day-note {
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-left: 4px solid var(--terracotta);
+    background: rgba(255,255,255,0.45);
+    font-weight: 700;
+    color: var(--ink);
+    max-width: 62ch;
   }
   @media (max-width: 640px) {
     .lang-switch { top: calc(env(safe-area-inset-top, 0px) + 12px); right: 12px; }
-    .lang-switch button { padding: 6px 9px; font-size: 12px; }
+    .lang-switch button { padding: 5px 5px; }
+    .lang-switch button svg { width: 26px; height: 18px; }
   }
 
   /* ---------- ornament: azulejo tile motif ---------- */
@@ -662,9 +675,9 @@
 <body>
 
 <div class="lang-switch" role="group" aria-label="Language">
-  <button type="button" data-lang="en" class="active">EN</button>
-  <button type="button" data-lang="pt">PT</button>
-  <button type="button" data-lang="fr">FR</button>
+  <button type="button" data-lang="en" class="active" aria-label="English" title="English"><svg viewBox="0 0 60 40" aria-hidden="true"><clipPath id="ukc"><rect width="60" height="40"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0V40M0,20H60" stroke="#fff" stroke-width="13"/><path d="M30,0V40M0,20H60" stroke="#C8102E" stroke-width="8"/></g></svg></button>
+  <button type="button" data-lang="pt" aria-label="Português" title="Português"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#FF0000"/><rect width="24" height="40" fill="#006600"/><circle cx="24" cy="20" r="7" fill="#FFCC00"/><circle cx="24" cy="20" r="4.2" fill="#fff" stroke="#FF0000" stroke-width="1.2"/></svg></button>
+  <button type="button" data-lang="fr" aria-label="Français" title="Français"><svg viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#0055A4"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#EF4135"/></svg></button>
 </div>
 
 <section class="hero">
@@ -759,7 +772,7 @@
     <div class="kicker" data-i18n="detailsKicker">The details</div>
     <h2 data-i18n="detailsH2">Two places, one long day</h2>
     <p style="margin-top:16px;" data-i18n="detailsIntro">The ceremony and the party happen in two different spots, a short drive apart — details for both are below.</p>
-    <p style="margin-top:10px; color:var(--ink-soft);" data-i18n="detailsOneDayNote">It's a wedding in Portugal: everything happens on the one day, and there's no next-day gathering to plan around.</p>
+    <p class="one-day-note" data-i18n="detailsOneDayNote">Please note: as this wedding is in Portugal, not France, the custom is for the whole celebration to take place on a single day — there is no next-day gathering.</p>
 
     <div class="venue-grid">
       <div class="venue-card">
@@ -1142,7 +1155,7 @@
       detailsKicker: "The details",
       detailsH2: "Two places, one long day",
       detailsIntro: "The ceremony and the party happen in two different spots, a short drive apart — details for both are below.",
-      detailsOneDayNote: "It's a wedding in Portugal: everything happens on the one day, and there's no next-day gathering to plan around.",
+      detailsOneDayNote: "Please note: as this wedding is in Portugal, not France, the custom is for the whole celebration to take place on a single day — there is no next-day gathering.",
       ceremonyTitle: "Igreja de São João Baptista", ceremonyAddr: "Praça da República, Tomar",
       ceremonyDesc: "A 15th-century Manueline church right on Tomar's main square, where we'll say our vows.",
       ceremonyToggleLabel: "Inside the church", ceremonyToggleText: "A Renaissance stone pulpit by João de Ruão, and a panel painting attributed to the court painter Gregório Lopes.",
@@ -1232,7 +1245,7 @@
       detailsKicker: "Os detalhes",
       detailsH2: "Dois lugares, um dia longo",
       detailsIntro: "A cerimónia e a festa acontecem em dois locais diferentes, a uma curta distância um do outro — os detalhes de ambos estão abaixo.",
-      detailsOneDayNote: "É um casamento em Portugal: tudo acontece num único dia, sem encontro no dia seguinte para planear.",
+      detailsOneDayNote: "Nota: como este casamento é em Portugal e não em França, o costume é que toda a celebração aconteça num único dia — não há encontro no dia seguinte.",
       ceremonyTitle: "Igreja de São João Baptista", ceremonyAddr: "Praça da República, Tomar",
       ceremonyDesc: "Uma igreja manuelina do século XV, mesmo na praça principal de Tomar, onde diremos os nossos votos.",
       ceremonyToggleLabel: "No interior da igreja", ceremonyToggleText: "Um púlpito renascentista de João de Ruão, e uma pintura atribuída ao pintor da corte Gregório Lopes.",
@@ -1322,7 +1335,7 @@
       detailsKicker: "Les détails",
       detailsH2: "Deux lieux, une longue journée",
       detailsIntro: "La cérémonie et la fête se déroulent à deux endroits différents, à quelques minutes l'un de l'autre — tous les détails ci-dessous.",
-      detailsOneDayNote: "C'est un mariage au Portugal : tout se passe en une seule journée, sans rassemblement prévu le lendemain.",
+      detailsOneDayNote: "À noter : le mariage ayant lieu au Portugal et non en France, l'usage est que toute la fête se déroule sur une seule journée — il n'y a pas de rassemblement le lendemain.",
       ceremonyTitle: "Igreja de São João Baptista", ceremonyAddr: "Praça da República, Tomar",
       ceremonyDesc: "Une église manuéline du XVe siècle, sur la place principale de Tomar, où nous échangerons nos vœux.",
       ceremonyToggleLabel: "À l'intérieur de l'église", ceremonyToggleText: "Une chaire Renaissance de João de Ruão, et un panneau peint attribué au peintre de cour Gregório Lopes.",
